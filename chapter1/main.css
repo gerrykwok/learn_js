@@ -1,0 +1,6 @@
+/* style go here */
+#mainCanvas {
+	width: 400px;
+	height: 320px;
+	border: solid 1px black;
+}
