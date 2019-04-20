@@ -86,6 +86,10 @@ function test07()
 	{
 		console.log(`item=${s}`)
 	}
+	for(let s in a1)
+	{
+		console.log(`a1[${s}]=${a1[s]}`)
+	}
 }
 
 function test08()
@@ -104,11 +108,45 @@ function test08()
 		}
 	}
 	console.log(`obj=${obj}`)
+
+	const arr = [1, 'two', 3]
+	console.log(`arr=${arr}`)
+}
+
+function test09()
+{
+	const n = -100;
+	if(!n)
+		console.log("false")
+	else
+		console.log("true")
+
+	const obj = {
+		field1 : 1,
+		field2 : 2,
+	}
+	obj.field1 = 10
+	console.log(`field1=${obj.field1}`)
+}
+
+function test10()
+{
+	const player = {name : 'steven', rank : '1234', age : 27}
+	for(let prop in player)
+	{
+		//if(!player.hasOwnProperty(prop)) continue
+		console.log(prop + ":" + player[prop])
+	}
+	//以下语句不行
+//	for(let s of player)
+//	{
+//		console.log(`s=${s}`)
+//	}
 }
 
 $(document).ready(function() {
 	'use strict';
 
 	console.log("main.js loaded")
-	test08()
+	test10()
 })
