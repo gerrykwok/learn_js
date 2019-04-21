@@ -40,7 +40,47 @@ function test03()
 	greet.call(bruce)
 }
 
+function func01()
+{
+	console.log(`x=${x}`)
+}
+
+function test04()
+{
+	const x = 300
+	func01()
+}
+
+function my_closure()
+{
+	let count = 0
+	return function()
+	{
+		count++
+		console.log(`count=${count}`)
+	}
+}
+
+function test_closure()
+{
+	let f = my_closure()
+	f()
+	f()
+}
+
+function test05()
+{
+	myfunc_1()
+}
+
+function myfunc_1()
+{
+	console.log("myfunc_1")
+}
+
 $(document).ready(function() {
 	'use strict';
-	test03()
+//	test04()
+//	test_closure()
+	test05()
 })
