@@ -144,9 +144,27 @@ function test10()
 //	}
 }
 
+function test11()
+{
+//	let a = 3 + 5 + "8"
+//	console.log(`a=${a}`)
+	let x = true, y = 1
+	let z = x && y
+	console.log(`z=${z}`)
+
+	let val = 1
+	let t = typeof val;
+	console.log(`type is ${t}`)
+
+	//解构赋值
+	const obj = {b : 2, c : 3, d : 4}
+	let {a, b, c} = obj;
+	console.log(`a=${a},b=${b},c=${c}`)
+}
+
 $(document).ready(function() {
 	'use strict';
 
 	console.log("main.js loaded")
-	test10()
+	test11()
 })
