@@ -166,5 +166,5 @@ $(document).ready(function() {
 	'use strict';
 
 	console.log("main.js loaded")
-	test11()
+	test06()
 })
